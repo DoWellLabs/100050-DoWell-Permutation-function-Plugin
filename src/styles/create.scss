@@ -1,0 +1,140 @@
+@import './colors';
+.create {
+    .holder {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        form {
+            position: relative;
+            width: 100%;
+            min-height: 80vh;
+            box-shadow: 4px 4px 12px #3440544d;
+            border-radius: 8px;
+            .r-lable {
+                position: absolute;
+            }
+            .r-input {
+                position: absolute;
+                border: 1px solid $borders-gray;
+                border-radius: 8px;
+                padding-left: 10px;
+            }
+            .n-lable {
+                position: absolute;
+            }
+            .n-input {
+                position: absolute;
+                border: 1px solid $borders-gray;
+                border-radius: 8px;
+                padding-left: 10px;
+            }
+            .variable-lable {
+                position: absolute;
+            }
+            .variable-input {
+                position: absolute;
+                border: 1px solid $borders-gray;
+                border-radius: 8px;
+                padding-left: 10px;
+            }
+            button {
+                position: absolute;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 768px){
+    .create {
+        .holder {
+            grid-column: 2/12;
+            .r-lable {
+                top: 40px;
+                left: 40px;
+            }
+            .r-input {
+                position: absolute;
+                top: 80px;
+                left: 40px;
+                width: 280px;
+                height: 40px;
+            }
+            .n-lable {
+                position: absolute;
+                top: 160px;
+                left: 40px;
+            }
+            .n-input {
+                top: 200px;
+                left: 40px;
+                width: 280px;
+                height: 40px;
+            }
+            .variable-lable {
+                position: absolute;
+                top: 280px;
+                left: 40px;
+            }
+            .variable-input {
+                top: 320px;
+                left: 40px;
+                width: 280px;
+                height: 40px;
+            }
+            
+            button {
+                bottom: 40px;
+                right: 40px;
+                width: 120px;
+                height: 40px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .create {
+        .holder {
+            grid-column: 1/7;
+            .r-lable {
+                top: 20px;
+                left: 20px;
+            }
+            .r-input {
+                position: absolute;
+                top: 60px;
+                left: 20px;
+                width: 260px;
+                height: 35px;
+            }
+            .n-lable {
+                position: absolute;
+                top: 140px;
+                left: 20px;
+            }
+            .n-input {
+                top: 180px;
+                left: 20px;
+                width: 260px;
+                height: 35px;
+            }
+            .variable-lable {
+                position: absolute;
+                top: 260px;
+                left: 20px;
+            }
+            .variable-input {
+                top: 300px;
+                left: 20px;
+                width: 260px;
+                height: 35px;
+            }
+            
+            button {
+                bottom: 20px;
+                right: 20px;
+                width: 120px;
+                height: 40px;
+            }
+        }
+    }
+}

@@ -1,0 +1,172 @@
+@import './colors';
+.settings {
+    .holder {
+        position: relative;
+        height: calc(100vh - 200px);
+        margin-top: 100px;
+        background-color: #fff;
+        box-shadow: 3px 3px 8px #00000042;
+        border-radius: 12px;
+        form {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 30px;
+            overflow-y: scroll;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            -ms-overflow-style: none;  
+            scrollbar-width: none;
+            .labels {
+                display: flex;
+                .char-label {
+                    display: block;
+                }
+            }
+            .inputs {
+                display: flex;
+                align-items: center;
+                .var-input {
+                    border: 1px solid $borders-gray;
+                    border-radius: 8px;
+                    padding-left: 16px;
+                }
+                .char-input {
+                    padding-left: 15px;
+                    border: 1px solid $borders-gray;
+                    border-radius: 8px;
+                }
+                .delete {
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #D63031;
+                }
+            }
+            .add {
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                span {
+                    display: flex;
+                    margin: 10px 0;
+                }
+            }
+        }
+        .save {
+            position: absolute;
+        }
+    }
+}
+
+@media screen and (min-width:992px) {
+    .settings {
+        .holder {
+            grid-column: 2/12;
+            form {
+                padding: 50px 20px;
+                .labels {
+                    .char-label {
+                        width: 140px;
+                    }
+                }
+                .inputs {
+                    .var-input {
+                        margin-right: 100px;
+                        width: 40px;
+                        height: 40px;
+                    }
+                    .char-input {
+                        margin-right: 20px;
+                        width: 180px;
+                        height: 40px;
+                    }
+                }
+            }
+            .save {
+                bottom: 20px;
+                right: 20px;
+                width: 120px;
+                height: 40px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:992px){
+    .settings {
+        .holder {
+            grid-column: 1/13;
+            form {
+                padding: 50px 10px;
+                .labels {
+                    .char-label {
+                        width: 120px;
+                    }
+                }
+                .inputs {
+                    .var-input {
+                        margin-right: 80px;
+                        width: 40px;
+                        height: 40px;
+                    }
+                    .char-input {
+                        margin-right: 20px;
+                        width: 180px;
+                        height: 40px;
+                    }
+                }
+            }
+            .save {
+                bottom: 10px;
+                right: 10px;
+                width: 90px;
+                height: 35px;
+            }
+        }
+    }
+}
+@media screen and (max-width:768px) {
+    .settings {
+        .holder {
+            grid-column: 1/7;
+            form {
+                padding: 50px 10px;
+                gap: 30px;
+                .labels {
+                    margin-bottom: 0px;
+                    .char-label {
+                        width: 100px;
+                    }
+                }
+                .inputs {
+                    margin-bottom: 0px;
+                    .var-input {
+                        margin-right: 60px;
+                        width: 30px;
+                        height: 30px;
+                    }
+                    .char-input {
+                        margin-right: 20px;
+                        width: 120px;
+                        height: 30px;
+                    }
+                }
+            }
+            .save {
+                bottom: 10px;
+                right: 10px;
+                width: 90px;
+                height: 35px;
+            }
+        }
+    }
+}

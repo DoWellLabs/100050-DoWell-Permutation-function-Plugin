@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/sidebar.scss';
 // import { useDispatch, useSelector } from 'react-redux';;
-import { AiOutlineClockCircle, AiOutlineEdit, AiOutlineEye, AiOutlineMenu, AiOutlinePlusCircle } from 'react-icons/ai';
+import { AiOutlineClockCircle, AiOutlineEdit, AiOutlineEye, AiOutlineMenu, AiOutlinePlusCircle , AiOutlineSetting } from 'react-icons/ai';
 
 import { Link } from "react-router-dom";
 
@@ -54,6 +54,15 @@ const SideBar = () => {
                         >
                             <span className={`icon x-large-fs light-gray`}>{AiOutlineEdit({})}</span>
                             <p className={`text large-fs normal normal-gray`}>Edit one</p>
+                        </li>
+                    </Link>
+                    <Link to='/settings'>
+                        <li 
+                            className={`li `} 
+                            onClick={()=>setActive(false)}
+                        >
+                            <span className={`icon x-large-fs light-gray`}>{AiOutlineSetting({})}</span>
+                            <p className={`text large-fs normal normal-gray`}>settings</p>
                         </li>
                     </Link>
                 </ul>

@@ -1,0 +1,302 @@
+.user {
+  position: relative;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.user .details {
+  z-index: 3;
+  position: absolute;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--s)), color-stop(80%, var(--p)));
+  background-image: linear-gradient(var(--s), var(--p) 80%);
+  color: var(--t);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 12px;
+  -webkit-box-shadow: 2px 2px 8px #34405432;
+          box-shadow: 2px 2px 8px #34405432;
+}
+
+.user .details h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+}
+
+.user .details h2 span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.user .details p {
+  border-left: solid 2px var(--t);
+  padding-left: 5px;
+}
+
+.user .details .icons {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.user .details .icons a {
+  color: var(--t);
+}
+
+.user .details .icons .option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.user .icon {
+  z-index: 3;
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: var(--p);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 2px 5px 8px #34405432;
+          box-shadow: 2px 5px 8px #34405432;
+  color: var(--t);
+  cursor: pointer;
+}
+
+.user .icon span {
+  font-size: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.user .icon.active span {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.user .icon::before {
+  content: '';
+  position: absolute;
+  width: 48px;
+  height: 30px;
+  background-color: transparent;
+  left: -33px;
+  top: 53%;
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+  border-top-right-radius: 60px 38px;
+  -webkit-box-shadow: 1px -13px var(--p);
+          box-shadow: 1px -13px var(--p);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.2) transparent transparent transparent;
+  z-index: -10;
+}
+
+.user .icon::after {
+  content: '';
+  position: absolute;
+  width: 48px;
+  height: 30px;
+  background-color: transparent;
+  right: -33px;
+  top: 53%;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  border-top-left-radius: 60px 38px;
+  -webkit-box-shadow: -1px -13px var(--p);
+          box-shadow: -1px -13px var(--p);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.2) transparent transparent transparent;
+}
+
+.user .permutation {
+  background-color: #fff;
+  -webkit-box-shadow: 4px 4px 8px #34405432;
+          box-shadow: 4px 4px 8px #34405432;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  border-radius: 0 0 12px 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  overflow: hidden;
+  gap: 10px;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  height: 0px;
+  white-space: nowrap;
+}
+
+.user .permutation .code-block {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 1em;
+  overflow: auto;
+  padding: 1em;
+  white-space: pre-wrap;
+  width: 100%;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.user .permutation .code-block::-webkit-scrollbar {
+  display: none;
+}
+
+.user .permutation .copy-icon {
+  position: absolute;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.user .permutation .copy-icon:hover {
+  background-color: rgba(208, 213, 221, 0.6);
+}
+
+@media only screen and (min-width: 768px) {
+  .user {
+    height: 80px;
+  }
+  .user .details {
+    height: 80px;
+    padding: 20px;
+  }
+  .user .details .icons {
+    width: 90px;
+    height: 40px;
+    right: 30px;
+  }
+  .user .icon {
+    width: 50px;
+    height: 50px;
+    top: 80px;
+    right: 40px;
+  }
+  .user.active {
+    height: 380px;
+  }
+  .permutation {
+    top: 70px;
+    padding: 0px 30px;
+  }
+  .permutation .code-block {
+    height: 200px;
+  }
+  .permutation .copy-icon {
+    bottom: 10px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+  }
+  .permutation.active {
+    height: 300px;
+    padding: 20px 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .user {
+    height: 80px;
+  }
+  .user .details {
+    height: 80px;
+    padding: 10px;
+  }
+  .user .details .icons {
+    width: 60px;
+    height: 40px;
+    right: 10px;
+  }
+  .user .icon {
+    width: 50px;
+    height: 50px;
+    top: 80px;
+    right: 40px;
+  }
+  .user.active {
+    height: 380px;
+  }
+  .permutation {
+    top: 70px;
+    padding: 0px 30px;
+  }
+  .permutation .code-block {
+    height: 200px;
+  }
+  .permutation .copy-icon {
+    bottom: 10px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+  }
+  .permutation.active {
+    height: 320px;
+    padding: 20px 30px;
+  }
+}
+/*# sourceMappingURL=card.css.map */

@@ -1,0 +1,171 @@
+.create .holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.create .holder form {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: 4px 4px 12px #3440544d;
+          box-shadow: 4px 4px 12px #3440544d;
+  border-radius: 8px;
+  background-color: var(--b);
+}
+
+.create .holder form .r-lable {
+  position: absolute;
+  color: var(--t);
+}
+
+.create .holder form .r-input {
+  position: absolute;
+  border: 1px solid #D0D5DD;
+  border-radius: 8px;
+  padding-left: 10px;
+  color: var(--t);
+  background-color: var(--b);
+}
+
+.create .holder form .n-lable {
+  position: absolute;
+  color: var(--t);
+}
+
+.create .holder form .n-input {
+  position: absolute;
+  border: 1px solid #D0D5DD;
+  border-radius: 8px;
+  padding-left: 10px;
+  color: var(--t);
+  background-color: var(--b);
+}
+
+.create .holder form .variable-lable {
+  position: absolute;
+  color: var(--t);
+}
+
+.create .holder form .variable-input {
+  position: absolute;
+  border: 1px solid #D0D5DD;
+  border-radius: 8px;
+  padding-left: 10px;
+  color: var(--t);
+  background-color: var(--b);
+}
+
+.create .holder form button {
+  position: absolute;
+  color: var(--t);
+  background-color: var(--p);
+  border: 1px solid var(--s);
+}
+
+.create .holder form button.active, .create .holder form button:hover {
+  outline: 2px solid rgba(var(--s), 0.4);
+}
+
+.create .holder form button.clicked::before {
+  background-color: var(--s);
+}
+
+@media only screen and (min-width: 768px) {
+  .create .holder {
+    width: 360px;
+    height: 500px;
+  }
+  .create .holder .r-lable {
+    top: 40px;
+    left: 40px;
+  }
+  .create .holder .r-input {
+    position: absolute;
+    top: 80px;
+    left: 40px;
+    width: 280px;
+    height: 40px;
+  }
+  .create .holder .n-lable {
+    position: absolute;
+    top: 160px;
+    left: 40px;
+  }
+  .create .holder .n-input {
+    top: 200px;
+    left: 40px;
+    width: 280px;
+    height: 40px;
+  }
+  .create .holder .variable-lable {
+    position: absolute;
+    top: 280px;
+    left: 40px;
+  }
+  .create .holder .variable-input {
+    top: 320px;
+    left: 40px;
+    width: 280px;
+    height: 40px;
+  }
+  .create .holder button {
+    bottom: 40px;
+    right: 40px;
+    width: 120px;
+    height: 40px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .create .holder {
+    width: 300px;
+    height: 440px;
+  }
+  .create .holder .r-lable {
+    top: 20px;
+    left: 20px;
+  }
+  .create .holder .r-input {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    width: 260px;
+    height: 35px;
+  }
+  .create .holder .n-lable {
+    position: absolute;
+    top: 140px;
+    left: 20px;
+  }
+  .create .holder .n-input {
+    top: 180px;
+    left: 20px;
+    width: 260px;
+    height: 35px;
+  }
+  .create .holder .variable-lable {
+    position: absolute;
+    top: 260px;
+    left: 20px;
+  }
+  .create .holder .variable-input {
+    top: 300px;
+    left: 20px;
+    width: 260px;
+    height: 35px;
+  }
+  .create .holder button {
+    bottom: 20px;
+    right: 20px;
+    width: 120px;
+    height: 40px;
+  }
+}
+/*# sourceMappingURL=create.css.map */

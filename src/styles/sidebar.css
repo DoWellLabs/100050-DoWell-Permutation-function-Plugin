@@ -1,0 +1,614 @@
+.sidebar {
+  z-index: 900;
+  position: fixed;
+  height: 100vh;
+  -webkit-box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.05);
+          box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.05);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #fff;
+}
+
+.sidebar .logo {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sidebar .logo img {
+  width: 40px;
+}
+
+.sidebar .DoWell-logo {
+  position: absolute;
+  bottom: 0;
+  padding: 20px 0;
+}
+
+.sidebar .DoWell-logo img {
+  width: 100px;
+  margin: 10px 0;
+}
+
+.sidebar .ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.sidebar .ul .li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 20px;
+  padding: 0 5px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.sidebar .ul .li:hover {
+  border: 1px solid #61ce70;
+  background-color: #cef9d2;
+}
+
+.sidebar .ul .li.active {
+  border: 1px solid #61ce70;
+  background-color: #cef9d2;
+}
+
+.sidebar .ul .li .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sidebar .ul .search {
+  border: 1px solid #D0D5DD;
+}
+
+.sidebar .account {
+  position: absolute;
+  bottom: 0px;
+  border-top: 2px solid #344054;
+}
+
+.sidebar .account .profileImage {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.sidebar .account .loggedOutIcon {
+  position: absolute;
+  background-color: #D0D5DD;
+  border-radius: 50%;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sidebar .account .name {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  text-transform: capitalize;
+}
+
+.sidebar .account .email {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-20%);
+          transform: translateY(-20%);
+}
+
+.sidebar .account .logOut {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: transparent;
+}
+
+.sidebar .loggedOut {
+  position: absolute;
+  bottom: 0px;
+  border-top: 2px solid #344054;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media only screen and (min-width: 992px) {
+  .sidebar {
+    width: 300px;
+    padding: 120px 20px;
+  }
+  .sidebar .slideBtn {
+    display: none;
+  }
+  .sidebar .logo {
+    top: 20px;
+  }
+  .sidebar .ul {
+    gap: 20px;
+  }
+  .sidebar .ul .li {
+    height: 50px;
+    width: 260px;
+  }
+  .sidebar .ul .search .input {
+    width: 215px;
+  }
+  .sidebar .account {
+    height: 70px;
+    width: 260px;
+  }
+  .sidebar .account .profileImage {
+    width: 40px;
+  }
+  .sidebar .account .loggedOutIcon {
+    width: 40px;
+    height: 40px;
+  }
+  .sidebar .account .name {
+    left: 50px;
+  }
+  .sidebar .account .email {
+    left: 50px;
+  }
+  .sidebar .loggedOut {
+    height: 70px;
+    width: 260px;
+  }
+  .sidebar .loggedOut .btn {
+    padding: 8px 24px;
+  }
+  .sidebar .blurOverLay {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+  .sidebar {
+    width: 250px;
+    padding: 110px 10px;
+  }
+  .sidebar .slideBtn {
+    display: none;
+  }
+  .sidebar .logo {
+    top: 20px;
+  }
+  .sidebar .ul {
+    gap: 5px;
+  }
+  .sidebar .ul .li {
+    height: 50px;
+    width: 230px;
+  }
+  .sidebar .ul .search .input {
+    width: 190px;
+  }
+  .sidebar .account {
+    height: 60px;
+    width: 230px;
+  }
+  .sidebar .account .profileImage {
+    width: 30px;
+  }
+  .sidebar .account .loggedOutIcon {
+    width: 30px;
+    height: 30px;
+  }
+  .sidebar .account .name {
+    left: 40px;
+  }
+  .sidebar .account .email {
+    left: 40px;
+  }
+  .sidebar .loggedOut {
+    height: 60px;
+    width: 230px;
+  }
+  .sidebar .loggedOut .btn {
+    padding: 8px 20px;
+  }
+  .sidebar .blurOverLay {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 480px) {
+  .sidebar {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    width: 250px;
+    padding: 100px 10px;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+  }
+  .sidebar .slideBtn {
+    position: absolute;
+    z-index: 900;
+    right: 0;
+    top: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    width: 30px;
+    height: 30px;
+    -webkit-box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2);
+            box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    border-radius: 0 0 50% 0;
+    padding: 2px 0 0 2px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .sidebar .slideBtn::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 25px;
+    background-color: transparent;
+    right: -14px;
+    -webkit-box-shadow: -10px 0px 0px -1px  #fff;
+            box-shadow: -10px 0px 0px -1px  #fff;
+    border-top-left-radius: 30px 50px;
+    bottom: -23px;
+    left: 3px;
+    -webkit-transform: rotateZ(20deg);
+            transform: rotateZ(20deg);
+  }
+  .sidebar .logo {
+    top: 20px;
+  }
+  .sidebar .ul {
+    gap: 10px;
+  }
+  .sidebar .ul .li {
+    height: 40px;
+    width: 230px;
+  }
+  .sidebar .ul .search .input {
+    width: 190px;
+  }
+  .sidebar .account {
+    height: 55px;
+    width: 230px;
+  }
+  .sidebar .account .profileImage {
+    width: 30px;
+  }
+  .sidebar .account .loggedOutIcon {
+    width: 30px;
+    height: 30px;
+  }
+  .sidebar .account .name {
+    left: 40px;
+  }
+  .sidebar .account .email {
+    left: 40px;
+  }
+  .sidebar .loggedOut {
+    height: 55px;
+    width: 230px;
+  }
+  .sidebar .loggedOut .btn {
+    padding: 8px 20px;
+  }
+  .sidebar.active {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  .blurOverLay {
+    position: fixed;
+    width: 0%;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 890;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+  }
+  .blurOverLay.active {
+    width: calc(100% - 250px);
+  }
+  @supports ((-webkit-backdrop-filter: blur(0.6rem)) or (backdrop-filter: blur(0.6rem))) {
+    .blurOverLay {
+      background-color: rgba(0, 0, 0, 0.2);
+      -webkit-backdrop-filter: blur(0.2rem);
+              backdrop-filter: blur(0.2rem);
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) and (min-width: 370px) {
+  .sidebar {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    width: 250px;
+    padding: 100px 10px;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+  }
+  .sidebar .slideBtn {
+    position: absolute;
+    z-index: 900;
+    right: 0;
+    top: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    width: 25px;
+    height: 25px;
+    -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    border-radius: 0 0 50% 0;
+    padding: 2px 0 0 2px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .sidebar .slideBtn::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 25px;
+    background-color: transparent;
+    right: -14px;
+    -webkit-box-shadow: -10px 0px 0px -1px  #fff;
+            box-shadow: -10px 0px 0px -1px  #fff;
+    border-top-left-radius: 30px 50px;
+    bottom: -23px;
+    left: 3px;
+    -webkit-transform: rotateZ(20deg);
+            transform: rotateZ(20deg);
+  }
+  .sidebar .logo {
+    top: 20px;
+  }
+  .sidebar .ul {
+    gap: 10px;
+  }
+  .sidebar .ul .li {
+    height: 40px;
+    width: 230px;
+  }
+  .sidebar .ul .search .input {
+    width: 190px;
+  }
+  .sidebar .account {
+    height: 55px;
+    width: 230px;
+  }
+  .sidebar .account .profileImage {
+    width: 30px;
+  }
+  .sidebar .account .loggedOutIcon {
+    width: 30px;
+    height: 30px;
+  }
+  .sidebar .account .name {
+    left: 40px;
+  }
+  .sidebar .account .email {
+    left: 40px;
+  }
+  .sidebar .loggedOut {
+    height: 55px;
+    width: 230px;
+  }
+  .sidebar .loggedOut .btn {
+    padding: 8px 20px;
+  }
+  .sidebar.active {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  .blurOverLay {
+    position: fixed;
+    width: 0%;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 890;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+  }
+  .blurOverLay.active {
+    width: calc(100% - 250px);
+  }
+  @supports ((-webkit-backdrop-filter: blur(0.6rem)) or (backdrop-filter: blur(0.6rem))) {
+    .blurOverLay {
+      background-color: rgba(0, 0, 0, 0.2);
+      -webkit-backdrop-filter: blur(0.2rem);
+              backdrop-filter: blur(0.2rem);
+    }
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .sidebar {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    width: 210px;
+    padding: 100px 10px;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+  }
+  .sidebar .slideBtn {
+    position: absolute;
+    z-index: 900;
+    right: 0;
+    top: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    width: 25px;
+    height: 25px;
+    -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    border-radius: 0 0 50% 0;
+    padding: 2px 0 0 2px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .sidebar .slideBtn::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 25px;
+    background-color: transparent;
+    right: -14px;
+    -webkit-box-shadow: -10px 0px 0px -1px  #fff;
+            box-shadow: -10px 0px 0px -1px  #fff;
+    border-top-left-radius: 30px 50px;
+    bottom: -23px;
+    left: 3px;
+    -webkit-transform: rotateZ(20deg);
+            transform: rotateZ(20deg);
+  }
+  .sidebar .logo {
+    top: 20px;
+  }
+  .sidebar .ul {
+    gap: 10px;
+  }
+  .sidebar .ul .li {
+    height: 40px;
+    width: 190px;
+  }
+  .sidebar .ul .search .input {
+    width: 150px;
+  }
+  .sidebar .account {
+    height: 55px;
+    width: 190px;
+  }
+  .sidebar .account .profileImage {
+    width: 25px;
+  }
+  .sidebar .account .loggedOutIcon {
+    width: 25px;
+    height: 25px;
+  }
+  .sidebar .account .name {
+    left: 30px;
+  }
+  .sidebar .account .email {
+    left: 30px;
+  }
+  .sidebar .loggedOut {
+    height: 55px;
+    width: 190px;
+  }
+  .sidebar .loggedOut .btn {
+    padding: 8px 16px;
+  }
+  .sidebar.active {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  .blurOverLay {
+    position: fixed;
+    width: 0%;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 890;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+  }
+  .blurOverLay.active {
+    width: calc(100% - 210px);
+  }
+  @supports ((-webkit-backdrop-filter: blur(0.6rem)) or (backdrop-filter: blur(0.6rem))) {
+    .blurOverLay {
+      background-color: rgba(0, 0, 0, 0.2);
+      -webkit-backdrop-filter: blur(0.2rem);
+              backdrop-filter: blur(0.2rem);
+    }
+  }
+}
+/*# sourceMappingURL=sidebar.css.map */

@@ -1,0 +1,506 @@
+@import './colors';
+.sidebar {
+    z-index: 900;
+    position: fixed;
+    height: 100vh;
+    box-shadow: 10px 0px 20px rgba($color: #000000, $alpha: 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: #fff;
+    .logo {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        img {
+            width: 40px;
+        }
+    }
+    .DoWell-logo {
+        position: absolute;
+        bottom: 0;
+        padding: 20px 0;
+        img {
+            width: 100px;
+            margin: 10px 0;
+        }
+    }
+    .ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .li {
+            display: flex;
+            align-items:center;
+            justify-content: flex-start;
+            gap: 20px;
+            padding: 0 5px;
+            border-radius: 6px;
+            border: 1px solid transparent;
+            cursor: pointer;
+            &:hover {
+                border: 1px solid $primary-color;
+                background-color: $secondary-color;
+            }
+            &.active {
+                border: 1px solid $primary-color;
+                background-color: $secondary-color;
+            }
+            .icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        .search {
+            border: 1px solid $borders-gray;
+        }
+    }
+    .account {
+        position: absolute;
+        bottom: 0px;
+        border-top: 2px solid  $normal-gray;
+        .profileImage {
+            position: absolute;
+            background-color: #fff;
+            border-radius: 50%;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+        .loggedOutIcon {
+            position: absolute;
+            background-color: $borders-gray;
+            border-radius: 50%;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .name {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-100%);
+            text-transform: capitalize;
+        }
+        .email {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-20%);
+        }
+        .logOut {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            background-color: transparent;
+        }
+    }
+    .loggedOut {
+        position: absolute;
+        bottom: 0px;
+        border-top: 2px solid  $normal-gray;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 992px){
+    .sidebar {
+        width: 300px;
+        padding: 120px 20px;
+        .slideBtn {
+            display: none;
+        }
+        .logo {
+            top: 20px;
+        }
+        .ul {
+            gap:20px;
+            .li {
+                height: 50px;
+                width: 260px;
+            }
+            .search {
+                .input {
+                    width: 215px;
+                }
+            }
+        }
+        .account {
+            height: 70px;
+            width: 260px;
+            .profileImage {
+                width: 40px;
+            }
+            .loggedOutIcon {
+                width: 40px;
+                height: 40px;
+            }
+            .name {
+                left: 50px;
+            }
+            .email {
+                left: 50px;
+            }
+        }
+        .loggedOut {
+            height: 70px;
+            width: 260px;
+            .btn {
+                padding: 8px 24px;
+            }
+        }
+        .blurOverLay {
+            display: none;
+        }
+    }
+}
+@media only screen and (max-width: 992px) and (min-width:768px){
+    .sidebar {
+        width: 250px;
+        padding: 110px 10px;
+        .slideBtn {
+            display: none;
+        }
+        .logo {
+            top: 20px;
+        }
+        .ul {
+            gap:5px;
+            .li {
+                height: 50px;
+                width: 230px;
+            }
+            .search {
+                .input {
+                    width: 190px;
+                }
+            }
+        }
+        .account {
+            height: 60px;
+            width: 230px;
+            .profileImage {
+                width: 30px;
+            }
+            .loggedOutIcon {
+                width: 30px;
+                height: 30px;
+            }
+            .name {
+                left: 40px;
+            }
+            .email {
+                left: 40px;
+            }
+        }
+        .loggedOut {
+            height: 60px;
+            width: 230px;
+            .btn {
+                padding: 8px 20px;
+            }
+        }
+        .blurOverLay {
+            display: none;
+        }
+    }
+}
+@media only screen and (max-width: 768px) and (min-width:480px){
+    .sidebar {
+        transform: translateX(-100%);
+        width: 250px;
+        padding: 100px 10px;
+        transition: 0.7s;
+        .slideBtn {
+            position: absolute;
+            z-index: 900;
+            right: 0;
+            top: 0;
+            transform: translateX(100%);
+            width: 30px;
+            height: 30px;
+            box-shadow: 6px 6px 12px rgba($color: #000000, $alpha: 0.2);
+            background-color: #fff;
+            border-radius: 0 0 50% 0;
+            padding: 2px 0 0 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &::after {
+                content: '';
+                position: absolute;
+                width: 20px;
+                height: 25px;
+                background-color: transparent;
+                right: -14px;
+                box-shadow: -10px 0px 0px -1px  #fff;
+                border-top-left-radius:30px 50px;
+                bottom: -23px;
+                left: 3px;
+                transform: rotateZ(20deg);
+            }
+        }
+        .logo {
+            top: 20px;
+        }
+        .ul {
+            gap:10px;
+            .li {
+                height: 40px;
+                width: 230px;
+            }
+            .search {
+                .input {
+                    width: 190px;
+                }
+            }
+        }
+        .account {
+            height: 55px;
+            width: 230px;
+            .profileImage {
+                width: 30px;
+            }
+            .loggedOutIcon {
+                width: 30px;
+                height: 30px;
+            }
+            .name {
+                left: 40px;
+            }
+            .email {
+                left: 40px;
+            }
+        }
+        .loggedOut {
+            height: 55px;
+            width: 230px;
+            .btn {
+                padding: 8px 20px;
+            }
+        }
+        &.active {
+            transform: translateX(0%);
+        }
+    }
+    .blurOverLay {
+        position: fixed;
+        width: 0%;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        height: 100%;
+        top: 0;
+        right: 0;
+        z-index: 890;
+        transition: 0.7s;
+        &.active {
+            width: calc(100% - 250px);
+        }
+    }
+    @supports(backdrop-filter: blur(0.6rem)){
+        .blurOverLay {
+            background-color: rgba($color: #000000, $alpha: 0.2);
+            backdrop-filter: blur(0.2rem)
+        }
+    }
+}
+@media only screen and (max-width: 480px)and (min-width:370px){
+    .sidebar {
+        transform: translateX(-100%);
+        width: 250px;
+        padding: 100px 10px;
+        transition: 0.7s;
+        .slideBtn {
+            position: absolute;
+            z-index: 900;
+            right: 0;
+            top: 0;
+            transform: translateX(100%);
+            width: 25px;
+            height: 25px;
+            box-shadow: 5px 5px 15px rgba($color: #000000, $alpha: 0.2);
+            background-color: #fff;
+            border-radius: 0 0 50% 0;
+            padding: 2px 0 0 2px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            &::after {
+                content: '';
+                position: absolute;
+                width: 20px;
+                height: 25px;
+                background-color: transparent;
+                right: -14px;
+                box-shadow: -10px 0px 0px -1px  #fff;
+                border-top-left-radius:30px 50px;
+                bottom: -23px;
+                left: 3px;
+                transform: rotateZ(20deg);
+            }
+        }
+        .logo {
+            top: 20px;
+        }
+        .ul {
+            gap:10px;
+            .li {
+                height: 40px;
+                width: 230px;
+            }
+            .search {
+                .input {
+                    width: 190px;
+                }
+            }
+        }
+        .account {
+            height: 55px;
+            width: 230px;
+            .profileImage {
+                width: 30px;
+            }
+            .loggedOutIcon {
+                width: 30px;
+                height: 30px;
+            }
+            .name {
+                left: 40px;
+            }
+            .email {
+                left: 40px;
+            }
+        }
+        .loggedOut {
+            height: 55px;
+            width: 230px;
+            .btn {
+                padding: 8px 20px;
+            }
+        }
+        &.active {
+            transform: translateX(0%);
+        }
+    }
+    .blurOverLay {
+        position: fixed;
+        width: 0%;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        height: 100%;
+        top: 0;
+        right: 0;
+        z-index: 890;
+        transition: 0.7s;
+        &.active {
+            width: calc(100% - 250px);
+        }
+    }
+    @supports(backdrop-filter: blur(0.6rem)){
+        .blurOverLay {
+            background-color: rgba($color: #000000, $alpha: 0.2);
+            backdrop-filter: blur(0.2rem)
+        }
+    }
+}
+@media only screen and (max-width: 370px){
+    .sidebar {
+        transform: translateX(-100%);
+        width: 210px;
+        padding: 100px 10px;
+        transition: 0.7s;
+        .slideBtn {
+            position: absolute;
+            z-index: 900;
+            right: 0;
+            top: 0;
+            transform: translateX(100%);
+            width: 25px;
+            height: 25px;
+            box-shadow: 5px 5px 15px rgba($color: #000000, $alpha: 0.2);
+            background-color: #fff;
+            border-radius: 0 0 50% 0;
+            padding: 2px 0 0 2px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            &::after {
+                content: '';
+                position: absolute;
+                width: 20px;
+                height: 25px;
+                background-color: transparent;
+                right: -14px;
+                box-shadow: -10px 0px 0px -1px  #fff;
+                border-top-left-radius:30px 50px;
+                bottom: -23px;
+                left: 3px;
+                transform: rotateZ(20deg);
+            }
+        }
+        .logo {
+            top: 20px;
+        }
+        .ul {
+            gap:10px;
+            .li {
+                height: 40px;
+                width: 190px;
+            }
+            .search {
+                .input {
+                    width: 150px;
+                }
+            }
+        }
+        .account {
+            height: 55px;
+            width: 190px;
+            .profileImage {
+                width: 25px;
+            }
+            .loggedOutIcon {
+                width: 25px;
+                height: 25px;
+            }
+            .name {
+                left: 30px;
+            }
+            .email {
+                left: 30px;
+            }
+        }
+        .loggedOut {
+            height: 55px;
+            width: 190px;
+            .btn {
+                padding: 8px 16px;
+            }
+        }
+        &.active {
+            transform: translateX(0%);
+        }
+    }
+    .blurOverLay {
+        position: fixed;
+        width: 0%;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        height: 100%;
+        top: 0;
+        right: 0;
+        z-index: 890;
+        transition: 0.7s;
+        &.active {
+            width: calc(100% - 210px);
+        }
+    }
+    @supports(backdrop-filter: blur(0.6rem)){
+        .blurOverLay {
+            background-color: rgba($color: #000000, $alpha: 0.2);
+            backdrop-filter: blur(0.2rem)
+        }
+    }
+}

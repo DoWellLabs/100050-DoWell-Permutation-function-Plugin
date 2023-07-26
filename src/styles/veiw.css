@@ -1,0 +1,331 @@
+.view article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.view form {
+  background-color: var(--b);
+  color: var(--t);
+  -webkit-box-shadow: 4px 4px 12px #3440544d;
+          box-shadow: 4px 4px 12px #3440544d;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 40px;
+}
+
+.view form input {
+  background-color: var(--b);
+  border: 1px solid #D0D5DD;
+  padding-left: 20px;
+  border-radius: 8px;
+}
+
+.view form button {
+  color: var(--t);
+  background-color: var(--p);
+  border: 1px solid var(--s);
+}
+
+.view form button.active, .view form button:hover {
+  outline: 2px solid rgba(var(--s), 0.4);
+}
+
+.view form button.clicked::before {
+  background-color: var(--s);
+}
+
+.view-one .view-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: var(--b);
+  color: var(--t);
+  -webkit-box-shadow: 4px 4px 8px #34405432;
+          box-shadow: 4px 4px 8px #34405432;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.view-one .view-holder .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.view-one .view-holder .details h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  border-radius: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 2px solid var(--p);
+  overflow: hidden;
+}
+
+.view-one .view-holder .details h2 span {
+  background-color: var(--p);
+  height: 100%;
+  border-radius: 6px 6px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--t);
+}
+
+.view-one .view-holder .details h2 p {
+  padding: 10px 5px;
+  text-align: center;
+}
+
+.view-one .view-holder .data .permutation {
+  position: relative;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  overflow: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+.view-one .view-holder .data .permutation .code-block {
+  position: absolute;
+  top: 60px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 1em;
+  overflow: auto;
+  padding: 1em;
+  white-space: pre-wrap;
+}
+
+.view-one .view-holder .data .permutation .copy-icon {
+  position: absolute;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.view-one .view-holder .data .permutation .copy-icon:hover {
+  background-color: rgba(208, 213, 221, 0.6);
+}
+
+@media only screen and (min-width: 992px) {
+  .view form {
+    width: 600px;
+    height: 80px;
+    padding: 0 40px;
+  }
+  .view form input {
+    height: 40px;
+    width: 360px;
+  }
+  .view form button {
+    height: 40px;
+    width: 130px;
+  }
+  .view-one .view-holder {
+    height: 500px;
+  }
+  .view-one .view-holder .details {
+    gap: 30px;
+  }
+  .view-one .view-holder .details h2 {
+    height: 80px;
+    width: 280px;
+  }
+  .view-one .view-holder .details h2 span {
+    width: 280px;
+  }
+  .view-one .view-holder .details h2 p {
+    width: 280px;
+  }
+  .view-one .view-holder .data .permutation {
+    width: 600px;
+    height: 500px;
+  }
+  .view-one .view-holder .data .permutation .code-block {
+    width: calc(100% - 40px);
+    height: 360px;
+  }
+}
+
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+  .view article {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1/13;
+  }
+  .view form {
+    width: 500px;
+    height: 80px;
+    padding: 0 10px;
+  }
+  .view form input {
+    height: 40px;
+    width: 340px;
+  }
+  .view form button {
+    height: 40px;
+    width: 120px;
+  }
+  .view-one .view-holder {
+    height: 460px;
+  }
+  .view-one .view-holder .details {
+    padding: 60px 0px;
+    gap: 30px;
+  }
+  .view-one .view-holder .details h2 {
+    height: 80px;
+    width: 280px;
+  }
+  .view-one .view-holder .details h2 span {
+    width: 280px;
+  }
+  .view-one .view-holder .details h2 p {
+    width: 280px;
+  }
+  .view-one .view-holder .data .permutation {
+    width: 360px;
+    height: 480px;
+  }
+  .view-one .view-holder .data .permutation .code-block {
+    width: calc(100% - 40px);
+    height: 360px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .view article {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1/7;
+  }
+  .view form {
+    width: 370px;
+    height: 80px;
+    padding: 0 10px;
+  }
+  .view form input {
+    height: 40px;
+    width: 280px;
+  }
+  .view form button {
+    height: 40px;
+    width: 90px;
+  }
+  .view-one .view-holder {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 460px;
+    gap: 10px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .view-one .view-holder::-webkit-scrollbar {
+    display: none;
+  }
+  .view-one .view-holder .details {
+    padding: 60px 0px;
+    gap: 30px;
+  }
+  .view-one .view-holder .details h2 {
+    height: 80px;
+    width: 280px;
+  }
+  .view-one .view-holder .details h2 span {
+    width: 280px;
+  }
+  .view-one .view-holder .details h2 p {
+    width: 280px;
+  }
+  .view-one .view-holder .data .permutation {
+    width: 360px;
+    height: 480px;
+  }
+  .view-one .view-holder .data .permutation .code-block {
+    width: calc(100% - 40px);
+    height: 360px;
+  }
+}
+/*# sourceMappingURL=veiw.css.map */

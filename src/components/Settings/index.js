@@ -1,1 +1,1 @@
-export * from './Sittings.jsx';
+export * from './Settings.jsx';

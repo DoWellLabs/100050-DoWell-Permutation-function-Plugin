@@ -172,7 +172,7 @@ Edit.defaultProps = {
         bgColor: '#F2F4F7',
         textColor: '#344054'
     },
-    id: PropTypes.string,
+    id: '',
     onError: undefined,
     onSuccess: undefined
 }

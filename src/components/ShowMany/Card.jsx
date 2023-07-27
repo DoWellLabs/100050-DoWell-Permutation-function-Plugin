@@ -33,16 +33,27 @@ const User = ({choosen,setChoosen,index,id,date,setIdsArray,vars,colors,onCopy,o
     }
 
     useEffect(()=>{
-        let newWords = vars.map(e => {
+        if(vars.length === 1){
+            let newWord = vars
             for(let i = 0; i<varsToWords.length ; i++){
-                if(varsToWords[i].variable === e) {
-                    return varsToWords[i].word
+                if(varsToWords[i].variable === newWord) {
+                    newWord = varsToWords[i].word
                 }
             }
-            return e
-        })
+            setWords(newWord)
+        }else {
+            let newWords = vars.map(e => {
+                for(let i = 0; i<varsToWords.length ; i++){
+                    if(varsToWords[i].variable === e) {
+                        return varsToWords[i].word
+                    }
+                }
+                return e
+            })
+    
+            setWords(newWords)
+        }
 
-        setWords(newWords)
     },[vars.length,varsToWords.length])
     return (
         <article className={`user ${choosen? 'active' : ''}`} style={{'--p':primaryColor,'--s':secondaryColor,'--t':textColor}}>

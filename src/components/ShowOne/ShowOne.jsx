@@ -4,7 +4,7 @@ import '../../styles/veiw.css';
 import { MdContentCopy } from 'react-icons/md';
 import View from './View.jsx';
 
-const ViewOne = ({colors,onError,onSuccess,onCopy,varsToWords}) => {
+const ShowOne = ({colors,onError,onSuccess,onCopy,varsToWords}) => {
     const {primaryColor,secondaryColor,bgColor,textColor} = colors
     const [id,setId] = useState('')
     const [data, setData] = useState(null)
@@ -24,16 +24,26 @@ const ViewOne = ({colors,onError,onSuccess,onCopy,varsToWords}) => {
             .then(res => res.json())
             .then(json => {
                 let newData = json
-                let newVars = newData.permutationsVariables.map(e => {
+                if(newData.permutationsVariables.length === 1) {
+                    let newvar = newData.permutationsVariables
                     for(let i = 0; i<varsToWords.length ; i++){
-                        if(varsToWords[i].variable === e) {
-                            return varsToWords[i].word
+                        if(varsToWords[i].variable === newvar) {
+                            newvar = varsToWords[i].word
                         }
                     }
-                    return e
-                })
-
-                newData.permutationsVariables = newVars
+                    newData.permutationsVariables = newvar
+                }else {
+                    let newVars = newData.permutationsVariables.map(e => {
+                        for(let i = 0; i<varsToWords.length ; i++){
+                            if(varsToWords[i].variable === e) {
+                                return varsToWords[i].word
+                            }
+                        }
+                        return e
+                    })
+                    newData.permutationsVariables = newVars
+                }
+                
                 setData(newData)
                 onSuccess('permutation found')
             })
@@ -91,7 +101,7 @@ const ViewOne = ({colors,onError,onSuccess,onCopy,varsToWords}) => {
 }
 
 
-ViewOne.propTypes = {
+ShowOne.propTypes = {
     colors: {
         primaryColor: PropTypes.string,
         secondaryColor: PropTypes.string,
@@ -104,7 +114,7 @@ ViewOne.propTypes = {
     varsToWords:PropTypes.array
 }
 
-ViewOne.defaultProps = {
+ShowOne.defaultProps = {
     colors: {
         primaryColor: '#61ce70',
         secondaryColor: '#cef9d2',
@@ -117,4 +127,4 @@ ViewOne.defaultProps = {
     varsToWords:[]
 }
 
-export default ViewOne
+export default ShowOne
